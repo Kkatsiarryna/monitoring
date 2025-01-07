@@ -1,22 +1,11 @@
 import React from "react"
 import Paper from "@mui/material/Paper"
-import Table from "@mui/material/Table"
 import TableBody from "@mui/material/TableBody"
-import TableCell from "@mui/material/TableCell"
 import TableContainer from "@mui/material/TableContainer"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
-import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
-import { styled } from "@mui/system"
-
-const StyledTable = styled(Table)({
-  borderCollapse: "collapse",
-})
-
-const StyledTableCell = styled(TableCell)({
-  borderBottom: "none",
-})
+import { StyledTable, StyledTableCell, StyledTypography } from "../../styles/styles"
 
 export type DataRowType = {
   [key: string]: string | number
@@ -28,14 +17,14 @@ export type DataTableType = {
   dataRow?: DataRowType
 }
 
-const DataTable: React.FC<DataTableType> = ({ title, columns, dataRow }) => {
+const DataTableDashboard: React.FC<DataTableType> = ({ title, columns, dataRow }) => {
   return (
     <Box my={4}>
-      <Paper elevation={3}>
+      <Paper elevation={5} style={{ borderRadius: "15px" }}>
         <Box p={2}>
-          <Typography variant="h5" gutterBottom>
+          <StyledTypography variant="h5" gutterBottom>
             {title}
-          </Typography>
+          </StyledTypography>
           <TableContainer>
             <StyledTable>
               {columns && (
@@ -65,4 +54,4 @@ const DataTable: React.FC<DataTableType> = ({ title, columns, dataRow }) => {
   )
 }
 
-export default DataTable
+export default DataTableDashboard

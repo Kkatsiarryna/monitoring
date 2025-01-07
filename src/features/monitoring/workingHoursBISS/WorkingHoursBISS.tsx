@@ -1,13 +1,10 @@
-import DataTable, { DataRowType } from "../../../common/components/DataTable/DataTable"
-
+import DataTableDashboard, { DataRowType } from "../../../common/components/DataTableDashboard/DataTableDashboard"
 
 const dataRow: DataRowType = {
-  "Начало": "Значение 1",
-  "Конец": "Значение 2",
+  Начало: "Значение 1",
+  Конец: "Значение 2",
 }
 
 export const WorkingHoursBISS = () => {
-
-  return <></>
-
+  return <DataTableDashboard title={"Время работы BISS"} dataRow={dataRow} />
 }
