@@ -1,4 +1,4 @@
-import DataTableDashboard, { DataRowType } from "../../../common/components/DataTableDashboard/DataTableDashboard"
+import DataTableDashboard, { DataRowType } from "../../../../common/components/DataTableDashboard/DataTableDashboard"
 
 const dataRow: DataRowType = {
   Начало: "Значение 1",

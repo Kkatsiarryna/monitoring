@@ -14,8 +14,9 @@ import UpdateIcon from "@mui/icons-material/Update"
 import { Link } from "react-router"
 import Switch from "@mui/material/Switch"
 import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { changeTheme, selectThemeMode } from "../../../app/appSlice"
+import { changeTheme, selectAppStatus, selectThemeMode } from "../../../app/appSlice"
 import { useAppSelector } from "../../hooks/useAppSelector"
+import LinearProgress from "@mui/material/LinearProgress"
 
 const pages = [
   { name: "Мониторинг", path: "/monitoring" },
@@ -27,6 +28,7 @@ export function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const dispatch = useAppDispatch()
   const themeMode = useAppSelector(selectThemeMode)
+  const status = useAppSelector(selectAppStatus)
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget)
@@ -109,6 +111,7 @@ export function Header() {
           <Switch color={"default"} onChange={changeModeHandler} />
         </Toolbar>
       </Container>
+      {status === "loading" && <LinearProgress />}
     </AppBar>
   )
 }

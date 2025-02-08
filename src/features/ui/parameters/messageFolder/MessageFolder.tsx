@@ -1,6 +1,6 @@
 import Paper from "@mui/material/Paper"
 import Box from "@mui/material/Box"
-import { StyledTypography } from "../../../common/styles/styles"
+import { StyledTypography } from "../../../../common/styles/styles"
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 

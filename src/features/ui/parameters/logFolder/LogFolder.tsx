@@ -1,12 +1,12 @@
 import Paper from "@mui/material/Paper"
 import Box from "@mui/material/Box"
-import { StyledTypography } from "../../../common/styles/styles"
+import { StyledTypography } from "../../../../common/styles/styles"
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 
 export const LogFolder = () => {
   return (
-    <Box my={4}>
+    <Box my={2}>
       <Paper elevation={3} style={{ borderRadius: "15px" }}>
         <Box p={2} pb={0}>
           <StyledTypography variant="h5" gutterBottom>

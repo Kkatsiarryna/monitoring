@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router"
-import { Monitoring } from "../../features/monitoring/Monitoring"
-import { Parameters } from "../../features/parameters/Parameters"
-import { Logs } from "../../features/logs/Logs"
+import { Monitoring } from "../../features/ui/monitoring/Monitoring"
+import { Parameters } from "../../features/ui/parameters/Parameters"
+import { Logs } from "../../features/ui/logs/Logs"
 
 export const Path = {
   Main: "/",

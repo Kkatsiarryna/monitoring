@@ -19,7 +19,7 @@ export type DataTableType = {
 
 const DataTableDashboard: React.FC<DataTableType> = ({ title, columns, dataRow }) => {
   return (
-    <Box my={4}>
+    <Box my={2}>
       <Paper elevation={5} style={{ borderRadius: "15px" }}>
         <Box p={2}>
           <StyledTypography variant="h5" gutterBottom>
